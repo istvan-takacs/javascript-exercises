@@ -29,3 +29,19 @@ const meToo = document.createElement("p");
 meToo. textContent = "ME TOO!";
 anotherDiv.appendChild(meToo);
 
+const btn = document.querySelector("#btn");
+btn.onclick = () => alert("Hello World!")
+
+const btnThree = document.querySelector("#btn-three");
+btnThree.addEventListener("click", (e) => {
+    console.log(e.target);
+    e.target.style.background = "blue";
+    alert("Hello World!");
+});
+
+let link = document.querySelector('a');
+
+link.addEventListener('click',function(event) {
+    console.log(`${event.target} was clicked!`);
+    event.preventDefault();
+});
